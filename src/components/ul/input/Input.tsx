@@ -4,7 +4,7 @@ import scss from "./Input.module.scss";
 type InputPropsTypes = {
 	type: string;
 	value: string;
-	onChange: (e: React.MouseEvent<HTMLInputElement>) => void;
+	onChange: (e: React.ChangeEvent<HTMLInputElement>) => string;
 	onClick?: () => void;
 };
 const Input: FC<InputPropsTypes> = ({ onChange, onClick, value, type }) => {
