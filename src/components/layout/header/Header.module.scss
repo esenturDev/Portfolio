@@ -37,5 +37,43 @@
 		}
 	}
 	.content {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		h1 {
+			font-size: clamp(7px, 6vw, 30px);
+			font-weight: 600;
+			color: rgb(13, 13, 14);
+			span {
+				font-size: clamp(7px, 6vw, 30px);
+				font-weight: 600;
+				color: rgb(91, 36, 241);
+			}
+		}
+		nav {
+			display: flex;
+			align-items: center;
+			gap: 25px;
+			.link {
+				cursor: pointer;
+				font-size: clamp(7px, 5vw, 16px);
+				font-weight: 500;
+
+				transition: 0.3s;
+
+				color: var(--header-text-color);
+
+				&:hover {
+					color: var(--header-text-color-hover);
+				}
+				&.active {
+					background: -webkit-linear-gradient(-70deg, #ef00fc 0%, #d287f6 100%);
+					-webkit-background-clip: text;
+					background-clip: text;
+					-webkit-text-fill-color: rgba(0, 0, 0, 0);
+					-webkit-box-decoration-break: clone;
+				}
+			}
+		}
 	}
 }

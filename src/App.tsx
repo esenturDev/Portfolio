@@ -1,9 +1,10 @@
-import ProviderRouter from "./router";
+import { Layout } from "./components/layout/Layout";
+// import ProviderRouter from "./router";
 
 const App = () => {
 	return (
 		<>
-			<ProviderRouter />
+			<Layout/>
 		</>
 	);
 };
