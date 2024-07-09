@@ -17,6 +17,7 @@ const Contact = () => {
 		console.log(data, "data");
 		event?.preventDefault();
 		event?.stopPropagation();
+    reset();
 	};
 	return (
 		<section className={scss.Contact}>
