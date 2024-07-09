@@ -10,7 +10,7 @@ type ContextType = {
 };
 export const Welcome = () => {
 	const [techStackName, setTechStackName] = useState<number | null>(null);
-	const { language, setLanguage } = useContext(languageResultContext);
+	const { language } = useContext(languageResultContext);
 	console.log(language, "Welcome");
 	const ENMeText = "Hi, I m Esentur Ismailov";
 	const RuMeText = "Привет, я Эсентур Исмаилов";
@@ -52,11 +52,13 @@ export const Welcome = () => {
 									<div
 										onMouseEnter={() => setTechStackName(index + 1)}
 										onMouseLeave={() => setTechStackName(null)}
-                    className={scss.card}
+										className={scss.card}
 										key={index + 1}>
 										<img src={el.logo} alt={el.name} />
+										{techStackName === index + 1 && (
+											<p className={scss.TechStackText}>{el.name}</p>
+										)}
 									</div>
-									{techStackName === index + 1 && <p className={scss.TechStackText}>{el.name}</p>}
 								</>
 							))}
 						</div>
