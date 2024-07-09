@@ -29,12 +29,13 @@ html {
 }
 body {
 	font-family: "Inter", sans-serif;
-	background: rgb(244, 244, 244) !important;
+	// background: #c0e1ec !important;
+	background: linear-gradient(135deg, #c0e1ec 13.927%, #fff 94.5%);
 	color: black !important;
 }
 .container {
 	width: 100%;
-	max-width: 1570px;
+	max-width: 1400px;
 	margin-inline: auto;
 	padding-inline: 20px;
 }

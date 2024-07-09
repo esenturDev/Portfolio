@@ -33,7 +33,7 @@ export const Header = () => {
 					<div className={scss.content}>
             <h1>esenturDev</h1>
             <nav>
-
+							
             </nav>
           </div>
 				</div>
