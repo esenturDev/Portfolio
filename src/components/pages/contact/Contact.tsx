@@ -21,7 +21,7 @@ const Contact = () => {
 		reset();
 	};
 	return (
-		<section className={scss.Contact}>
+		<section id="contact" className={scss.Contact}>
 			<div className="container">
 				<div className={scss.content}>
 					<div className={scss.content_1}>

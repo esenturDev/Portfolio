@@ -15,7 +15,7 @@ export const Welcome = () => {
 	const ENMeText = "Hi, I m Esentur Ismailov";
 	const RuMeText = "Привет, я Эсентур Исмаилов";
 	return (
-		<section className={scss.Welcome}>
+		<section id="/" className={scss.Welcome}>
 			<div className="container">
 				<div className={scss.content}>
 					<div className={scss.content1}>

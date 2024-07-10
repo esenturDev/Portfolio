@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import scss from "./Project.module.scss";
 import { languageResultContext } from "../../../context/LanguageContext";
+import { IconBrandAmd, IconBrandGithub } from "@tabler/icons-react";
 interface projectsTypes {
 	title: string;
 	link: string;
@@ -94,7 +95,7 @@ export const Project = () => {
 		},
 	];
 	return (
-		<section className={scss.Project}>
+		<section id="project" className={scss.Project}>
 			<div className="container">
 				<div className={scss.content}>
 					<div className={scss.main_text_for_projects_div}>
@@ -121,8 +122,23 @@ export const Project = () => {
 											<p key={index + 1}>{text}</p>
 										))}
 									</div>
+									<div className={scss.stack}>
+										{project.stack.map((stack, index) => (
+											<button key={index + 1}>{stack}</button>
+										))}
+									</div>
+									<div className={scss.open_code_and_project}>
+										<a href={project.codeLink}>
+											Code <IconBrandGithub className={scss.icon} />
+										</a>
+										<a href={project.link}>
+											Live Demo <IconBrandAmd className={scss.icon} />
+										</a>
+									</div>
 								</div>
-								<img src={project.image} alt={project.title} />
+								<a href={project.link} className={scss.image_link}>
+									<img src={project.image} alt={project.title} />
+								</a>
 							</div>
 						))}
 					</div>

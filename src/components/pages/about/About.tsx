@@ -6,7 +6,7 @@ const About = () => {
 	console.log(language, "test");
 
 	return (
-		<section className={scss.about}>
+		<section id="about" className={scss.about}>
 			<div className="container">
 				<div className={scss.content}>
 					<img

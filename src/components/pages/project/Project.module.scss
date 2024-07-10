@@ -1,68 +1,136 @@
 .Project {
-  width: 100%;
-  height: auto;
-  .content {
-    padding-block: 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    .main_text_for_projects_div{
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      h1 {
-        font-size: clamp(10px, 7vw, 28px);
-        font-weight: 700;
-        color: rgb(91, 36, 241);
-      }
-      p {
-        font-size: clamp(7px, 5vw, 20px);
-        font-weight: 500;
-        color: rgb(22, 20, 20);
-      }
-    }
-    .container_projects_cards {
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
-      .card {
-        display: flex;
-        justify-content: space-between;
-        &.card_active {
-          display: flex;
-          flex-direction: row-reverse;
-          justify-content: space-between;
-        }
-        .texts_div_card {
-          display: flex;
-          flex-direction: column;
-          gap: 18px;
-          align-items: center;
-          h2 {
-            font-size: clamp(8px, 6vw, 23px);
-            font-weight: 600;
-            color: rgb(22, 20, 20);
-          }
-          .description{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 3.5px;
-            p {
-              font-size: clamp(7px, 4vw, 16px);
-              font-weight: 400;
-              color: rgb(22, 20, 20);
-            }
-          }
-        }
-        img {
-          width: 100%;
-          max-width: 300px;
-          height: 200px;
-          border-radius: 5px;
-          box-shadow: 0px 0px 15px rgb(35, 34, 34);
-        }
-      }
-    }
-  }
+	width: 100%;
+	height: auto;
+	.content {
+		padding-block: 24px;
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+		.main_text_for_projects_div {
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+			h1 {
+				font-size: clamp(10px, 7vw, 28px);
+				font-weight: 700;
+				color: rgb(91, 36, 241);
+			}
+			p {
+				font-size: clamp(7px, 5vw, 20px);
+				font-weight: 500;
+				color: rgb(22, 20, 20);
+			}
+		}
+		.container_projects_cards {
+			display: flex;
+			flex-direction: column;
+			gap: 25px;
+			.card {
+				transition: all 0.3s ease;
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+				padding-block: 25px;
+				padding-inline: 32px;
+				width: 100%;
+				border-radius: 15px;
+				box-shadow: 0px 0px 15px black;
+				height: auto;
+				background: rgba(161, 133, 237, 0.779);
+				&:hover {
+					transition: all 0.3s ease;
+					box-shadow: 0px 0px 21px black;
+				}
+				&.card_active {
+					display: flex;
+					flex-direction: row-reverse;
+					align-items: center;
+					justify-content: space-around;
+				}
+				.texts_div_card {
+					display: flex;
+					flex-direction: column;
+					gap: 18px;
+					align-items: center;
+					h2 {
+						font-size: clamp(8px, 6vw, 23px);
+						font-weight: 600;
+						color: rgb(22, 20, 20);
+					}
+					.description {
+						display: flex;
+						flex-direction: column;
+						align-items: center;
+						gap: 3.5px;
+						p {
+							font-size: clamp(7px, 4vw, 16px);
+							font-weight: 400;
+							color: rgb(22, 20, 20);
+						}
+					}
+					.stack {
+						display: flex;
+						flex-wrap: wrap;
+						justify-content: center;
+						gap: 7px;
+						width: 100%;
+						max-width: 350px;
+						button {
+							padding-block: 12px;
+							padding-inline: 15px;
+							border-radius: 5px;
+							border: none;
+							background: rgb(123, 83, 233);
+							color: rgb(22, 20, 20);
+							font-size: clamp(7px, 5vw, 15px);
+							font-weight: 500;
+							cursor: pointer;
+						}
+					}
+					.open_code_and_project {
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						width: 100%;
+						max-width: 275px;
+						gap: 25px;
+						a {
+							transition: all 0.4s ease;
+							display: flex;
+							align-items: center;
+							gap: 4px;
+							font-size: clamp(7px, 5vw, 21px);
+							font-weight: 500;
+							color: black;
+							&:hover {
+								transition: all 0.4s ease;
+								color: purple;
+							}
+							.icon {
+								transition: all 0.4s ease;
+								cursor: pointer;
+								width: 100%;
+								max-width: 35px;
+								height: 35px;
+								color: black;
+								&:hover {
+									transition: all 0.4s ease;
+									color: purple;
+								}
+							}
+						}
+					}
+				}
+				.image_link {
+					img {
+						width: 100%;
+						max-width: 400px;
+						height: 200px;
+						border-radius: 5px;
+						box-shadow: 0px 0px 15px rgb(35, 34, 34);
+					}
+				}
+			}
+		}
+	}
 }
