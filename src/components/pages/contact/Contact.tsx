@@ -3,6 +3,7 @@ import scss from "./Contact.module.scss";
 import { languageResultContext } from "../../../context/LanguageContext";
 import { IconBrandGmail, IconPhoneCheck } from "@tabler/icons-react";
 import { useForm, SubmitHandler, Controller } from "react-hook-form";
+import { Button } from "../../ul/button/Button";
 const Contact = () => {
 	const { language } = useContext(languageResultContext);
 	const {
@@ -17,7 +18,7 @@ const Contact = () => {
 		console.log(data, "data");
 		event?.preventDefault();
 		event?.stopPropagation();
-    reset();
+		reset();
 	};
 	return (
 		<section className={scss.Contact}>
@@ -111,6 +112,46 @@ const Contact = () => {
 								</div>
 							)}
 						/>
+						<Controller
+							name="message"
+							control={control}
+							defaultValue=""
+							rules={{
+								required: "message обязателен для заполнения",
+								minLength: {
+									value: 6,
+									message: "message должен содержать минимум 6 символов",
+								},
+							}}
+							render={({ field }) => (
+								<div>
+									<input
+										type="text"
+										id="message"
+										{...field}
+										style={errors.message && { border: "1px solid red" }}
+										placeholder={
+											language === "EN" ? "Your message" : "Ваше сообщение"
+										}
+									/>
+								</div>
+							)}
+						/>
+						{(errors.email && (
+							<p className={scss.error_text}>{errors.email.message}</p>
+						)) ||
+							(errors.name && (
+								<p className={scss.error_text}>{errors.name.message}</p>
+							)) ||
+							(errors.message && (
+								<p className={scss.error_text}>{errors.message.message}</p>
+							)) ||
+							(errors.contact && (
+								<p className={scss.error_text}>{errors.contact.message}</p>
+							))}
+						<Button type="submit">
+							{language === "EN" ? "Submit" : "Отправит"}
+						</Button>
 					</form>
 				</div>
 			</div>
