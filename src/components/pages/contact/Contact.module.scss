@@ -47,9 +47,47 @@
 			);
 			backdrop-filter: blur(10px);
 			-webkit-backdrop-filter: blur(10px);
-			border-radius: 6px;
+			border-radius: 13px;
 			border: 1px solid rgba(255, 255, 255, 0.18);
 			box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+			div {
+				width: 100%;
+				height: 45px;
+				input {
+					width: 100%;
+					height: 40px;
+					background: linear-gradient(
+						135deg,
+						rgba(255, 255, 255, 0.1),
+						rgba(255, 255, 255, 0)
+					);
+					backdrop-filter: blur(10px);
+					-webkit-backdrop-filter: blur(10px);
+					border-radius: 6px;
+					border: 1px solid rgba(28, 25, 25, 0.55);
+					padding-left: 10px;
+				}
+			}
+			.div_for_message {
+				width: 100%;
+				height: 100px;
+				input {
+					width: 100%;
+					height: 95px;
+					background: linear-gradient(
+						135deg,
+						rgba(255, 255, 255, 0.1),
+						rgba(255, 255, 255, 0)
+					);
+					backdrop-filter: blur(10px);
+					-webkit-backdrop-filter: blur(10px);
+					border-radius: 6px;
+					border: 1px solid rgba(28, 25, 25, 0.55);
+					padding-left: 10px;
+					display: flex;
+					align-items: start;
+				}
+			}
 		}
 	}
 }

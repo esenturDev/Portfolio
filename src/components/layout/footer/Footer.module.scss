@@ -1,0 +1,36 @@
+.Footer {
+	width: 100%;
+	height: auto;
+  background: #6f697676;
+  box-shadow: 0px 0px 15px black;
+	.content {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-block: 25px;
+		p {
+			font-size: clamp(7px, 6vw, 18px);
+			font-weight: 600;
+			color: rgb(22, 20, 20);
+		}
+		div {
+			display: flex;
+			align-items: center;
+			gap: 16px;
+			a {
+				.icon {
+					transition: all 0.4s ease;
+					cursor: pointer;
+					width: 100%;
+					max-width: 42px;
+					height: 42px;
+					color: black;
+					&:hover {
+						transition: all 0.4s ease;
+						color: purple;
+					}
+				}
+			}
+		}
+	}
+}

@@ -124,7 +124,7 @@ const Contact = () => {
 								},
 							}}
 							render={({ field }) => (
-								<div>
+								<div className={scss.div_for_message}>
 									<input
 										type="text"
 										id="message"
